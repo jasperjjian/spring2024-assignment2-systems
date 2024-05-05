@@ -1,0 +1,105 @@
+SIZE: 0
+MASTER_PORT: 12936
+MASTER_ADDR: ad12a3ca-01
+Backend: nccl
+0
+Vector size: 1000
+World size: 2, global rank: 1, local rank: 0, local world size: 1
+Timings: tensor([0.0000, 0.0319])
+Average time: 0.015971018001437187 milliseconds
+Backend: nccl
+0
+Vector size: 1000
+World size: 2, global rank: 0, local rank: 0, local world size: 1
+Timings: tensor([0.0328, 0.0000])
+Average time: 0.016422010958194733 milliseconds
+SIZE: 1
+MASTER_PORT: 12937
+MASTER_ADDR: ad12a3ca-01
+Backend: nccl
+1
+Vector size: 1000000.0
+World size: 2, global rank: 1, local rank: 0, local world size: 1
+Timings: tensor([0.0000, 0.0301])
+Average time: 0.015062978491187096 milliseconds
+Backend: nccl
+1
+Vector size: 1000000.0
+World size: 2, global rank: 0, local rank: 0, local world size: 1
+Timings: tensor([0.0312, 0.0000])
+Average time: 0.015579164028167725 milliseconds
+SIZE: 2
+MASTER_PORT: 12938
+MASTER_ADDR: ad12a3ca-01
+Backend: nccl
+2
+Vector size: 10000000.0
+World size: 2, global rank: 1, local rank: 0, local world size: 1
+Timings: tensor([0.0000, 0.0334])
+Average time: 0.016715027391910553 milliseconds
+Backend: nccl
+2
+Vector size: 10000000.0
+World size: 2, global rank: 0, local rank: 0, local world size: 1
+Timings: tensor([0.0330, 0.0000])
+Average time: 0.016500940546393394 milliseconds
+SIZE: 3
+MASTER_PORT: 12939
+MASTER_ADDR: ad12a3ca-01
+Backend: nccl
+3
+Vector size: 50000000.0
+World size: 2, global rank: 1, local rank: 0, local world size: 1
+Timings: tensor([0.0000, 0.0344])
+Average time: 0.017215032130479813 milliseconds
+Backend: nccl
+3
+Vector size: 50000000.0
+World size: 2, global rank: 0, local rank: 0, local world size: 1
+Timings: tensor([0.0321, 0.0000])
+Average time: 0.01604692079126835 milliseconds
+SIZE: 4
+MASTER_PORT: 12940
+MASTER_ADDR: ad12a3ca-01
+Backend: nccl
+4
+Vector size: 100000000.0
+World size: 2, global rank: 1, local rank: 0, local world size: 1
+Timings: tensor([0.0000, 0.0360])
+Average time: 0.017976969480514526 milliseconds
+Backend: nccl
+4
+Vector size: 100000000.0
+World size: 2, global rank: 0, local rank: 0, local world size: 1
+Timings: tensor([0.0460, 0.0000])
+Average time: 0.023014144971966743 milliseconds
+SIZE: 5
+MASTER_PORT: 12941
+MASTER_ADDR: ad12a3ca-01
+Backend: nccl
+5
+Vector size: 500000000.0
+World size: 2, global rank: 1, local rank: 0, local world size: 1
+Timings: tensor([0.0000, 0.0330])
+Average time: 0.016483012586832047 milliseconds
+Backend: nccl
+5
+Vector size: 500000000.0
+World size: 2, global rank: 0, local rank: 0, local world size: 1
+Timings: tensor([0.0616, 0.0000])
+Average time: 0.030798371881246567 milliseconds
+SIZE: 6
+MASTER_PORT: 12942
+MASTER_ADDR: ad12a3ca-01
+Backend: nccl
+6
+Vector size: 1000000000.0
+World size: 2, global rank: 1, local rank: 0, local world size: 1
+Timings: tensor([0.0000, 0.0376])
+Average time: 0.018808990716934204 milliseconds
+Backend: nccl
+6
+Vector size: 1000000000.0
+World size: 2, global rank: 0, local rank: 0, local world size: 1
+Timings: tensor([0.0480, 0.0000])
+Average time: 0.024020671844482422 milliseconds

@@ -52,7 +52,7 @@ def test_rmsnorm_backward_x_pytorch():
     x, g, dy = _make_rmsnorm_inputs()
     _rmsnorm(x, g).backward(dy)
     x_grad_pred = rmsnorm_backward_x_pytorch(dy, x, g)
-
+    print(x.grad[0, 0])
     assert torch.allclose(x_grad_pred, x.grad, rtol=1e-4, atol=1e-5), (
         x_grad_pred,
         x.grad,
@@ -63,7 +63,8 @@ def test_rmsnorm_backward_g_pytorch():
     x, g, dy = _make_rmsnorm_inputs()
     _rmsnorm(x, g).backward(dy)
     g_grad_pred = rmsnorm_backward_g_pytorch(dy, x, g)
-
+    print(g_grad_pred.shape)
+    print(g.grad.shape)
     assert torch.allclose(g_grad_pred, g.grad, rtol=1e-4, atol=1e-5), (
         g_grad_pred,
         g.grad,
@@ -81,6 +82,9 @@ def test_rmsnorm_backward_x_triton():
 
     x.grad = None
     get_rmsnorm_autograd_function_triton().apply(x, g).backward(dy)
+    
+    print(x.grad[0][0])
+    print(x_grad_ref[0][0])
 
     assert torch.allclose(x.grad, x_grad_ref, rtol=1e-4, atol=1e-5), (
         x.grad,
@@ -118,12 +122,12 @@ def _test_rmsnorm_forward_backward(f, device):
     g.grad = None
     y = f(x, g)
     y.backward(dy)
-
     assert torch.allclose(y, y_ref, rtol=1e-4, atol=1e-5), (y, y_ref)
     assert torch.allclose(x.grad, x_grad_ref, rtol=1e-4, atol=1e-5), (
         x.grad,
         x_grad_ref,
     )
+    
     assert torch.allclose(g.grad, g_grad_ref, rtol=1e-4, atol=1e-5), (
         g.grad,
         g_grad_ref,

@@ -4,3 +4,5 @@ numpy
 matplotlib
 # Includes a bugfix for recent NCCL versions
 HolisticTraceAnalysis @ git+https://github.com/nelson-liu/HolisticTraceAnalysis.git@comm_kernel_fix
+triton
+setuptools

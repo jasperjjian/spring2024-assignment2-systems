@@ -6,7 +6,7 @@ import logging
 import math
 import os
 from typing import Optional
-
+from cs336_systems import kernels
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -94,6 +94,7 @@ class BasicsTransformerLM(nn.Module):
         d_ff: int,
         attn_pdrop: Optional[float] = None,
         residual_pdrop: Optional[float] = None,
+        norm_type: Optional[str] = "rms",
     ):
         # Store the model configuration for serialization / deserialization
         self.config = {
@@ -118,7 +119,13 @@ class BasicsTransformerLM(nn.Module):
                 for _ in range(num_layers)
             ]
         )
-        self.ln_final = RMSNorm(d_model)
+        if norm_type == "rms":
+            self.ln_final = RMSNorm(d_model)
+        elif norm_type == "triton":
+            self.ln_final_weight = nn.Parameter(torch.ones(d_model))
+            self.ln_final = lambda x : kernels.rms_norm_triton.apply(x, self.ln_final_weight)
+        else:
+            self.ln_final = torch.nn.LayerNorm(d_model)
         self.lm_head = nn.Linear(d_model, vocab_size, bias=False)
         # Tie the weights, since the paper mentions that "we share the same weight
         # matrix between the two embedding layers and the pre-softmax linear transformation"
@@ -287,6 +294,7 @@ class TransformerBlock(nn.Module):
         d_ff: int,
         attn_pdrop: Optional[float] = None,
         residual_pdrop: Optional[float] = None,
+        norm_type: Optional[str] = "rms",
     ):
         super().__init__()
         self.attn = CausalMultiHeadSelfAttention(
@@ -294,9 +302,21 @@ class TransformerBlock(nn.Module):
             num_heads=num_heads,
             attn_pdrop=attn_pdrop,
         )
-        self.ln1 = RMSNorm(d_model)
+        if norm_type == "rms":
+            self.ln1 = RMSNorm(d_model)
+        elif norm_type == "triton":
+            self.ln1_weight = nn.Parameter(torch.ones(d_model))
+            self.ln1 = lambda x : kernels.rms_norm_triton.apply(x, self.ln1_weight)
+        else:
+            self.ln1 = torch.nn.LayerNorm(d_model)
         self.ffn = FFN(d_model=d_model, d_ff=d_ff)
-        self.ln2 = RMSNorm(d_model)
+        if norm_type == "rms":
+            self.ln2 = RMSNorm(d_model)
+        elif norm_type == "triton":
+            self.ln2_weight = nn.Parameter(torch.ones(d_model))
+            self.ln2 = lambda x : kernels.rms_norm_triton.apply(x, self.ln1_weight)
+        else:
+            self.ln2 = torch.nn.LayerNorm(d_model)
         self.residual_pdrop = residual_pdrop
 
     def forward(self, x: torch.Tensor):

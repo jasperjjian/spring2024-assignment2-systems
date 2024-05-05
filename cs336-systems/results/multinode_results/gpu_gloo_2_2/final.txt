@@ -1,0 +1,201 @@
+SIZE: 0
+MASTER_PORT: 12921
+MASTER_ADDR: ad12a3ca-01
+Backend: gloo
+0
+Vector size: 1000
+World size: 4, global rank: 2, local rank: 0, local world size: 2
+Timings: tensor([0.0000, 0.0000, 8.7539, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000])
+Average time: 1.0942418575286865 milliseconds
+Backend: gloo
+0
+Vector size: 1000
+World size: 4, global rank: 0, local rank: 0, local world size: 2
+Timings: tensor([8.7953, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000])
+Average time: 1.0994176864624023 milliseconds
+Backend: gloo
+0
+Vector size: 1000
+World size: 4, global rank: 3, local rank: 1, local world size: 2
+Timings: tensor([0.0000, 0.0000, 0.0000, 0.0000, 8.8925, 0.0000, 0.0000, 0.0000])
+Average time: 1.111566185951233 milliseconds
+Backend: gloo
+0
+Vector size: 1000
+World size: 4, global rank: 1, local rank: 1, local world size: 2
+Timings: tensor([0.0000, 0.0000, 8.7063, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000])
+Average time: 1.088292121887207 milliseconds
+SIZE: 1
+MASTER_PORT: 12922
+MASTER_ADDR: ad12a3ca-01
+Backend: gloo
+1
+Vector size: 1000000.0
+World size: 4, global rank: 2, local rank: 0, local world size: 2
+Timings: tensor([0.0000, 0.0000, 3.1312, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000])
+Average time: 0.3913957476615906 milliseconds
+Backend: gloo
+1
+Vector size: 1000000.0
+World size: 4, global rank: 1, local rank: 1, local world size: 2
+Timings: tensor([0.0000, 0.0000, 3.2931, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000])
+Average time: 0.41163724660873413 milliseconds
+Backend: gloo
+1
+Vector size: 1000000.0
+World size: 4, global rank: 0, local rank: 0, local world size: 2
+Timings: tensor([3.1229, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000])
+Average time: 0.3903571665287018 milliseconds
+Backend: gloo
+1
+Vector size: 1000000.0
+World size: 4, global rank: 3, local rank: 1, local world size: 2
+Timings: tensor([0.0000, 0.0000, 0.0000, 0.0000, 2.6714, 0.0000, 0.0000, 0.0000])
+Average time: 0.33391961455345154 milliseconds
+SIZE: 2
+MASTER_PORT: 12923
+MASTER_ADDR: ad12a3ca-01
+Backend: gloo
+2
+Vector size: 10000000.0
+World size: 4, global rank: 0, local rank: 0, local world size: 2
+Timings: tensor([19.7613,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000])
+Average time: 2.470167875289917 milliseconds
+Backend: gloo
+2
+Vector size: 10000000.0
+World size: 4, global rank: 3, local rank: 1, local world size: 2
+Timings: tensor([ 0.0000,  0.0000,  0.0000,  0.0000, 19.3907,  0.0000,  0.0000,  0.0000])
+Average time: 2.4238319396972656 milliseconds
+Backend: gloo
+2
+Vector size: 10000000.0
+World size: 4, global rank: 2, local rank: 0, local world size: 2
+Timings: tensor([ 0.0000,  0.0000, 19.3683,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000])
+Average time: 2.4210400581359863 milliseconds
+Backend: gloo
+2
+Vector size: 10000000.0
+World size: 4, global rank: 1, local rank: 1, local world size: 2
+Timings: tensor([ 0.0000,  0.0000, 19.3956,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000])
+Average time: 2.424445629119873 milliseconds
+SIZE: 3
+MASTER_PORT: 12924
+MASTER_ADDR: ad12a3ca-01
+Backend: gloo
+3
+Vector size: 50000000.0
+World size: 4, global rank: 2, local rank: 0, local world size: 2
+Timings: tensor([ 0.0000,  0.0000, 65.2493,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000])
+Average time: 8.156158447265625 milliseconds
+Backend: gloo
+3
+Vector size: 50000000.0
+World size: 4, global rank: 0, local rank: 0, local world size: 2
+Timings: tensor([64.7405,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000])
+Average time: 8.092564582824707 milliseconds
+Backend: gloo
+3
+Vector size: 50000000.0
+World size: 4, global rank: 3, local rank: 1, local world size: 2
+Timings: tensor([ 0.0000,  0.0000,  0.0000,  0.0000, 65.7197,  0.0000,  0.0000,  0.0000])
+Average time: 8.214956283569336 milliseconds
+Backend: gloo
+3
+Vector size: 50000000.0
+World size: 4, global rank: 1, local rank: 1, local world size: 2
+Timings: tensor([ 0.0000,  0.0000, 65.3495,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000])
+Average time: 8.168691635131836 milliseconds
+SIZE: 4
+MASTER_PORT: 12925
+MASTER_ADDR: ad12a3ca-01
+Backend: gloo
+4
+Vector size: 100000000.0
+World size: 4, global rank: 2, local rank: 0, local world size: 2
+Timings: tensor([  0.0000,   0.0000, 123.7205,   0.0000,   0.0000,   0.0000,   0.0000,
+          0.0000])
+Average time: 15.46506404876709 milliseconds
+Backend: gloo
+4
+Vector size: 100000000.0
+World size: 4, global rank: 0, local rank: 0, local world size: 2
+Timings: tensor([122.8254,   0.0000,   0.0000,   0.0000,   0.0000,   0.0000,   0.0000,
+          0.0000])
+Average time: 15.353177070617676 milliseconds
+Backend: gloo
+4
+Vector size: 100000000.0
+World size: 4, global rank: 3, local rank: 1, local world size: 2
+Timings: tensor([  0.0000,   0.0000,   0.0000,   0.0000, 123.9503,   0.0000,   0.0000,
+          0.0000])
+Average time: 15.493786811828613 milliseconds
+Backend: gloo
+4
+Vector size: 100000000.0
+World size: 4, global rank: 1, local rank: 1, local world size: 2
+Timings: tensor([  0.0000,   0.0000, 123.1073,   0.0000,   0.0000,   0.0000,   0.0000,
+          0.0000])
+Average time: 15.38841724395752 milliseconds
+SIZE: 5
+MASTER_PORT: 12926
+MASTER_ADDR: ad12a3ca-01
+Backend: gloo
+5
+Vector size: 500000000.0
+World size: 4, global rank: 0, local rank: 0, local world size: 2
+Timings: tensor([635.9271,   0.0000,   0.0000,   0.0000,   0.0000,   0.0000,   0.0000,
+          0.0000])
+Average time: 79.49089050292969 milliseconds
+Backend: gloo
+5
+Vector size: 500000000.0
+World size: 4, global rank: 2, local rank: 0, local world size: 2
+Timings: tensor([  0.0000,   0.0000, 638.3131,   0.0000,   0.0000,   0.0000,   0.0000,
+          0.0000])
+Average time: 79.78913879394531 milliseconds
+Backend: gloo
+5
+Vector size: 500000000.0
+World size: 4, global rank: 1, local rank: 1, local world size: 2
+Timings: tensor([  0.0000,   0.0000, 636.1326,   0.0000,   0.0000,   0.0000,   0.0000,
+          0.0000])
+Average time: 79.51657104492188 milliseconds
+Backend: gloo
+5
+Vector size: 500000000.0
+World size: 4, global rank: 3, local rank: 1, local world size: 2
+Timings: tensor([  0.0000,   0.0000,   0.0000,   0.0000, 637.8199,   0.0000,   0.0000,
+          0.0000])
+Average time: 79.72749328613281 milliseconds
+SIZE: 6
+MASTER_PORT: 12927
+MASTER_ADDR: ad12a3ca-01
+Backend: gloo
+6
+Vector size: 1000000000.0
+World size: 4, global rank: 0, local rank: 0, local world size: 2
+Timings: tensor([1232.1665,    0.0000,    0.0000,    0.0000,    0.0000,    0.0000,
+           0.0000,    0.0000])
+Average time: 154.02081298828125 milliseconds
+Backend: gloo
+6
+Vector size: 1000000000.0
+World size: 4, global rank: 2, local rank: 0, local world size: 2
+Timings: tensor([   0.0000,    0.0000, 1237.2480,    0.0000,    0.0000,    0.0000,
+           0.0000,    0.0000])
+Average time: 154.656005859375 milliseconds
+Backend: gloo
+6
+Vector size: 1000000000.0
+World size: 4, global rank: 1, local rank: 1, local world size: 2
+Timings: tensor([   0.0000,    0.0000, 1232.0616,    0.0000,    0.0000,    0.0000,
+           0.0000,    0.0000])
+Average time: 154.00770568847656 milliseconds
+Backend: gloo
+6
+Vector size: 1000000000.0
+World size: 4, global rank: 3, local rank: 1, local world size: 2
+Timings: tensor([   0.0000,    0.0000,    0.0000,    0.0000, 1238.0570,    0.0000,
+           0.0000,    0.0000])
+Average time: 154.7571258544922 milliseconds
